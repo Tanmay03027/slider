@@ -1,0 +1,34 @@
+
+
+$(document).ready(function(){
+  var inWrap = $('.inner-wrapper');
+
+  $('.prev').click(function(){
+
+    inWrap.animate({left: '0%'},
+    300, function(){
+          inWrap.css('left', '-100%');
+
+          $('.slide').first().before($('.slide').last());
+    });
+  });
+
+
+
+
+
+
+
+  $('.next').click(function(){
+
+    inWrap.animate({left: '-200%'},
+    300, function(){
+          inWrap.css('left', '-100%');
+
+          $('.slide').last().after($('.slide').first());
+    });
+  });
+
+
+
+});
